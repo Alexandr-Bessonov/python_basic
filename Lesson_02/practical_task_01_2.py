@@ -14,3 +14,7 @@ while var < length:
     var += 1
 
 print("End")
+print("Второй вариант решения!")
+
+for i, item in enumerate(result_list, 1):
+    print(f'{i}) {item} - {type(item)}')

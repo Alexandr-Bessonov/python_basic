@@ -19,13 +19,18 @@ while a < quantity:
 
     my_dict = {}  # создаем пустой словарь
     my_dict.update(
-        {"Название": my_list[0], "Цена": int(my_list[1]), "Количество": int(my_list[2]), "Ед": my_list[3]})  # наполняем словарь
+        {"Название": my_list[0],
+         "Цена": int(my_list[1]),
+         "Количество": int(my_list[2]),
+         "Ед": my_list[3]})  # наполняем словарь
     my_tuple = (var, my_dict)
     goods.append(my_tuple)
     var += 1
     a += 1
 
-print(f"Каталог товаров: \n{goods}")
+print(f"Каталог товаров: ")
+for i in goods:
+    print(i)
 print('_' * 150)
 print('Далее выводим аналитику по данному катологу:')
 
@@ -71,6 +76,9 @@ while var < quantity:
         param_4.append(goods[var][1].get("Ед"))
         var += 1
 
-analitics.update({"Название": param_1, "Цена": param_2, "Количество": param_3, "Ед": param_4})
+analitics.update({"Название": param_1,
+                  "Цена": param_2,
+                  "Количество": param_3,
+                  "Ед": param_4})
 
 print(analitics)
