@@ -2,8 +2,8 @@ print("This is the solution to task 2 to lesson 2")
 
 result_list = []  # создаем пустой список
 quantity = int(input('Введите количество элементов в списке: '))
-var = 0 # временная переменная для создания списка
-var_2 = 0 # временная переменая для индексации элементов списка
+var = 0  # временная переменная для создания списка
+var_2 = 0  # временная переменая для индексации элементов списка
 
 while var < quantity:
     user_input = input('Введите число: ')
@@ -22,3 +22,17 @@ else:
         var_2 += 2
 
 print(result_list)
+
+print('_' * 150)
+print("Второй вариант решения")
+
+i = []  # создаем пустой список
+quantity = int(input('Введите количество элементов в списке: '))
+var = 0
+while var < quantity:
+    user_input = input('Введите число: ')
+    i.append(user_input)
+    var += 1
+
+i[:-1:2], i[1:-1:2] = i[1:-1:2], i[:-1:2]
+print(i)
