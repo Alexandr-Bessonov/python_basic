@@ -1,2 +1,8 @@
-print("This is the solution to task 1 to lesson 5")
-#print('_' * 150)
+f = open("Text.txt", "w")
+while True:
+    uzer_list = input("Введите текст: ")
+    if uzer_list == '':
+        break
+    else:
+        f.writelines(f"{uzer_list}\n")
+f.close()
