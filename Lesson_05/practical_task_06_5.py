@@ -1,6 +1,6 @@
 def my_func_2(text):
-    if text == False:
-        return ""
+    if text == 'None':
+        return ''
     else:
         return text
 
@@ -26,6 +26,7 @@ def my_func(a):
     while n < len(var_1):
         if my_func_2(var_1[n]) == var_1[n]:
             res_1 = res_1 + str(var_1[n])
+            n += 1
 
     res_1 = int(res_1)
 
@@ -34,6 +35,7 @@ def my_func(a):
     while n < len(var_2):
         if my_func_2(var_2[n]) == var_2[n]:
             res_2 = res_2 + str(var_2[n])
+            n += 1
 
     res_2 = int(res_2)
 
@@ -42,14 +44,13 @@ def my_func(a):
     while n < len(var_3):
         if my_func_2(var_3[n]) == var_3[n]:
             res_3 = res_3 + str(var_3[n])
+            n += 1
 
     res_3 = int(res_3)
 
-    # res_1 = str(var[0][0]) + str(var[0][1]) + str(var[0][2])
-    # var_2 = str(var[1][0]) + str(var[1][1]) + str(var[1][2])
-    # var_3 = str(var[2][0]) + str(var[2][1]) + str(var[2][2])
 
     return res_1 + res_2 + res_3
+
 
 my_dict = dict()
 my_list = []
