@@ -14,10 +14,10 @@ def out_green(text):
 
 
 class TrafficLight:
-    # атрибуты класса
-    __light_color = 0
-
     # методы класса
+
+    def __init__(self, __light_color="red"):
+        self.light_color = __light_color
 
     def running(self):
         while True:
