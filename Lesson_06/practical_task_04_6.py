@@ -38,7 +38,9 @@ class SportCar(Car):
 
 
 class WorkCar(Car):
-    pass
+    def show_speed(self):
+        if self.speed > 40:
+            print("Скорость автомобиля превышена")
 
 
 class PoliceCar(Car):
@@ -48,7 +50,12 @@ class PoliceCar(Car):
 lada = TownCar("Lada", 60, "red", "False")
 print(lada.show_speed())
 lada.go()
+sleep(2)
 lada.turn()
+sleep(2)
 lada.turn()
+sleep(2)
 lada.turn()
+sleep(2)
+lada.stop()
 # police = PoliceCar()
