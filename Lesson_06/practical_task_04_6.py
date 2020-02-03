@@ -10,52 +10,77 @@ class Car:
         self.color = color
         self.name = name
         self.is_polise = is_police
-        print("Машина завелась")
+        print(f"{name} завелась")
 
     def go(self):
-        print("Машина поехала")
+        print(f"{self.name} поехала")
 
     def stop(self):
-        print("Машина остановилась")
+        print(f"{self.name} остановилась")
 
     def turn(self):
-        print(f"Машина повернула {random.choice(sequence)}")
+        print(f"{self.name} повернула {random.choice(sequence)}")
 
     def show_speed(self):
-        print(f"Текущая скорость: {self.speed}")
-        if self.speed > 60:
-            pass
+        print(f"Текущая скорость {self.name}: {self.speed}")
 
 
 class TownCar(Car):
     def show_speed(self):
+        print(f"Текущая скорость {self.name}: {self.speed}")
         if self.speed > 60:
-            print("Скорость автомобиля превышена")
+            print(f"Скорость {self.name} превышена")
 
 
 class SportCar(Car):
-    pass
+    def show_speed(self):
+        print(f"Текущая скорость {self.name}: {self.speed}")
+        if self.speed > 60:
+            print(f"Скорость {self.name} превышена")
+        print(f"{self.name} гоняет по треку")
 
 
 class WorkCar(Car):
     def show_speed(self):
         if self.speed > 40:
-            print("Скорость автомобиля превышена")
+            print(f"Скорость {self.name} превышена")
 
 
 class PoliceCar(Car):
-    pass
+    def go(self):
+        print(f"{self.name} выехала в погоню")
+    def chase(self):
+        if lada.speed > 60:
+            self.polise.go()
+        print(f"Скорость движения полиции: {police.speed}")
+    def stop(self):
+        print(f"{self.name} заблокировала нарушителя")
 
 
-lada = TownCar("Lada", 60, "red", "False")
-print(lada.show_speed())
+lada = TownCar("Lada", 65, "red", "False")
+sleep(2)
 lada.go()
 sleep(2)
-lada.turn()
+print(lada.show_speed())
+sleep(2)
+police = PoliceCar("Porshe", 70, "police", True)
+sleep(2)
+police.go()
+sleep(2)
+print(police.show_speed())
 sleep(2)
 lada.turn()
 sleep(2)
+police.turn()
+sleep(2)
 lada.turn()
+police.turn()
+sleep(2)
+lada.turn()
+sleep(2)
+police.turn()
 sleep(2)
 lada.stop()
-# police = PoliceCar()
+sleep(2)
+police.stop()
+
