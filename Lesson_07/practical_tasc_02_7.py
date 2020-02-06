@@ -35,6 +35,7 @@ class Costume(Clothes):
     def __str__(self):
         return f'Площадь требуемого материала на костюм {self.sq_costume}'
 
+
 coat = Coat(48)
 costume = Costume(1.72)
 print(coat)
